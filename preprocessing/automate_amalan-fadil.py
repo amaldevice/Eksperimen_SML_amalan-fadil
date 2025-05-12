@@ -28,5 +28,5 @@ def automate_preprocessing(input_path: str, output_path: str):
 
 if __name__ == "__main__":
     input_path = "Sleep_health_and_lifestyle_dataset.csv"
-    output_path = "sleep_data_cleaned.csv"
+    output_path = "preprocessing/sleep_data_cleaned.csv"
     automate_preprocessing(input_path, output_path)
