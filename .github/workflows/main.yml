@@ -1,4 +1,4 @@
-name: Run Workflow Data Preprocessing ( Kriteria 1 )
+name: Run Data Preprocessing
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.9.13
+        python-version: 3.10
 
     - name: Install Dependencies
       run: |
@@ -31,4 +31,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: cleaned-sleep-data
-        path: sleep_data_cleaned.csv
+        path: preprocessing/sleep_data_cleaned.csv
