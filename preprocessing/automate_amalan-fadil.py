@@ -27,6 +27,6 @@ def automate_preprocessing(input_path: str, output_path: str):
     print(f"✅ Preprocessing selesai. Dataset disimpan di {output_path}")
 
 if __name__ == "__main__":
-    input_path = "../Sleep_health_and_lifestyle_dataset.csv"
+    input_path = "Sleep_health_and_lifestyle_dataset.csv"
     output_path = "sleep_data_cleaned.csv"
     automate_preprocessing(input_path, output_path)
