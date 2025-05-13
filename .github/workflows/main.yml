@@ -31,7 +31,7 @@ jobs:
       run: |
         git config --global user.name "GitHub Actions Bot"
         git config --global user.email "actions@github.com"
-        git add preprocessing/sleep_data_cleaned.csv
+        git add preprocessing/Sleep-health-and-lifestyle-dataset_preprocessing.csv
         git commit -m "Add processed dataset sleep_data_cleaned.csv"
         git push
       env:
@@ -41,4 +41,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: cleaned-sleep-data
-        path: preprocessing/sleep_data_cleaned.csv
+        path: preprocessing/Sleep-health-and-lifestyle-dataset_preprocessing.csv
