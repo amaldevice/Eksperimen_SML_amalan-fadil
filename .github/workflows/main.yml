@@ -27,7 +27,17 @@ jobs:
       run: |
         python preprocessing/automate_amalan-fadil.py
 
-    - name: Upload Processed Dataset
+    - name: Commit and Push Processed Dataset to Repository
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "actions@github.com"
+        git add preprocessing/sleep_data_cleaned.csv
+        git commit -m "Add processed dataset sleep_data_cleaned.csv"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Upload Processed Dataset as Artifact
       uses: actions/upload-artifact@v4
       with:
         name: cleaned-sleep-data
